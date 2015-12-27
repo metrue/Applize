@@ -3,7 +3,7 @@
 </p>
 
 ```
-                                              Applize( url ) = (iOS Native App)
+                                    Applize( url ) = (iOS Native App)
 ```
 
 A scaffold project to bundle your website into iOS Application.
