@@ -10,13 +10,13 @@ A scaffold project to bundle your website into iOS Application.
 
 # Usage
 
-1. clone this project
+* clone this project
   
 ```
   $ git clone https://github.com/metrue/Applize <your app>
 ```
 
-2. configure it a little bit, quite simple
+* configure it a little bit, quite simple
 
 ```
   $ Applize/Config.h
@@ -24,7 +24,7 @@ A scaffold project to bundle your website into iOS Application.
 
   put your customize information there
 
-3. build your application
+* build your application
   
   you need xcode installed, instll it via Apple Store, or get it directly from [https://developer.apple.com/downloads/](https://developer.apple.com/downloads/)
 
@@ -32,5 +32,10 @@ A scaffold project to bundle your website into iOS Application.
   open  Applize.xcodeproj
 ```
 
-  then fire it up with '⌘  + Ra'
+and you know the shortcut keys for build and run yeah
+
+```
+  ⌘  + R
+```
+build it up, and you will see the magic. 
 
