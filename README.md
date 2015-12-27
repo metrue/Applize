@@ -2,11 +2,12 @@
   <img src="http://ac-a4mbptsl.clouddn.com/191f8b9df25f453a.png"></img>
 </p>
 
+```
+              Applize( url ) = (iOS Native App)
+```
+
 A scaffold project to bundle your website into iOS Application.
 
-```
-  Applize( url ) = (iOS Native App)
-```
 
 # Usage
 
