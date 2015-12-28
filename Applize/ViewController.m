@@ -55,6 +55,19 @@
     }
 }
 
+- (BOOL) shouldAutorotate {
+    return SHOULDAUTOROTATE;
+}
+
+- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return SHOULDAUTOROTATE;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    //return UIInterfaceOrientationPortrait;
+    return UIInterfaceOrientationLandscapeRight;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
