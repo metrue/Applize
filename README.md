@@ -9,7 +9,7 @@
 A scaffold project to bundle your website into iOS Application.
 
 
-# Usage
+## Usage
 
 * clone this project
   
@@ -40,3 +40,6 @@ and you know the shortcut keys for build and run yeah
 ```
 build it up, and you will see the magic. 
 
+## LICENSE
+
+MIT
