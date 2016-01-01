@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Config.h"
+#import <AVFoundation/AVFoundation.h>
 @import JavaScriptCore;
 
 @interface ViewController () <UIWebViewDelegate>
@@ -22,19 +23,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    if (ENABLE_AUDIO_IN_BACKGROUND) {
+        [self enableAudioInBackground];
+    }
+    
+    [self loadWebSite];
+}
+
+- (void) loadWebSite {
     _webView = [[UIWebView alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
     
-    // set the url string to your website url
     NSString *urlString = URL_OF_YOUR_WEBSITE;
-    
     NSURL *url = [[NSURL alloc] initWithString:urlString];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     
     [_webView setScalesPageToFit:YES];
-    
     [_webView loadRequest:urlRequest];
     [_webView setDelegate:self];
     [self.view addSubview:_webView];
+}
+
+- (void) enableAudioInBackground {
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    BOOL ok;
+    NSError *setCategoryError = nil;
+    ok = [audioSession setCategory:AVAudioSessionCategoryPlayback
+                             error:&setCategoryError];
+    if (!ok) {
+        NSLog(@"%s setCategoryError=%@", __PRETTY_FUNCTION__, setCategoryError);
+    }
 }
 
 - (void)startProgressIndicator {
@@ -49,7 +66,7 @@
     [_loadingSpin removeFromSuperview];
     NSLog(@"%@ - %@", [self getJavaScript], [_webView stringByEvaluatingJavaScriptFromString:[self getJavaScript]]);
     NSLog(@"@");
-    [self testJavaScript];
+    //[self testJavaScript];
 }
 
 - (void) testJavaScript {

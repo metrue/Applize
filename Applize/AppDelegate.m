@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+@import AVFoundation;
 
 @interface AppDelegate ()
 

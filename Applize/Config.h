@@ -21,4 +21,7 @@
 // if should auto rotate screen
 #define SHOULDAUTOROTATE NO 
 
+// if enable audio/vedio play background mode
+#define ENABLE_AUDIO_IN_BACKGROUND YES
+
 #endif /* Config_h */
