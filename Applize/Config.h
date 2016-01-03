@@ -10,7 +10,7 @@
 #define Config_h
 
 // Change url to your website
-#define URL_OF_YOUR_WEBSITE @"http://laivei.com"
+#define URL_OF_YOUR_WEBSITE @"http://localhost:8000/"
 
 // If show status bar on top of your app
 #define DISABLE_STATUS_BAR YES

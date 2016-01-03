@@ -15,8 +15,9 @@
 		BA385E581C2ED228002C1674 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA385E561C2ED228002C1674 /* LaunchScreen.storyboard */; };
 		BA385E631C2ED228002C1674 /* ApplizeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA385E621C2ED228002C1674 /* ApplizeTests.m */; };
 		BA385E6E1C2ED229002C1674 /* ApplizeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA385E6D1C2ED229002C1674 /* ApplizeUITests.m */; };
-		BAD3042D1C352C2C00BC88A6 /* binding.js in Resources */ = {isa = PBXBuildFile; fileRef = BAD3042C1C352C2C00BC88A6 /* binding.js */; };
+		BAD3042D1C352C2C00BC88A6 /* notification.js in Resources */ = {isa = PBXBuildFile; fileRef = BAD3042C1C352C2C00BC88A6 /* notification.js */; };
 		BAD3042F1C36C62300BC88A6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD3042E1C36C62300BC88A6 /* AVFoundation.framework */; };
+		BAD304311C39245E00BC88A6 /* console.js in Resources */ = {isa = PBXBuildFile; fileRef = BAD304301C39245E00BC88A6 /* console.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +55,9 @@
 		BA385E691C2ED229002C1674 /* Applize.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Applize.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA385E6D1C2ED229002C1674 /* ApplizeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplizeUITests.m; sourceTree = "<group>"; };
 		BA385E6F1C2ED229002C1674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BAD3042C1C352C2C00BC88A6 /* binding.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = binding.js; sourceTree = "<group>"; };
+		BAD3042C1C352C2C00BC88A6 /* notification.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = notification.js; sourceTree = "<group>"; };
 		BAD3042E1C36C62300BC88A6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BAD304301C39245E00BC88A6 /* console.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = console.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +154,8 @@
 		BAD3042A1C3518A100BC88A6 /* JavaScript */ = {
 			isa = PBXGroup;
 			children = (
-				BAD3042C1C352C2C00BC88A6 /* binding.js */,
+				BAD3042C1C352C2C00BC88A6 /* notification.js */,
+				BAD304301C39245E00BC88A6 /* console.js */,
 			);
 			path = JavaScript;
 			sourceTree = "<group>";
@@ -260,10 +263,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAD3042D1C352C2C00BC88A6 /* binding.js in Resources */,
+				BAD3042D1C352C2C00BC88A6 /* notification.js in Resources */,
 				BA21B6511C2FC8F600DC12DA /* Main.storyboard in Resources */,
 				BA385E581C2ED228002C1674 /* LaunchScreen.storyboard in Resources */,
 				BA385E551C2ED228002C1674 /* Assets.xcassets in Resources */,
+				BAD304311C39245E00BC88A6 /* console.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
