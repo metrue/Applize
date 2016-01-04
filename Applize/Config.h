@@ -13,13 +13,13 @@
 #define URL_OF_YOUR_WEBSITE @"http://localhost:8000/"
 
 // If show status bar on top of your app
-#define DISABLE_STATUS_BAR YES
+#define ENABLE_STATUS_BAR YES
 
 // If show loading spin when loading your website
-#define SHOW_LOADING_SPIN YES
+#define ENABLE_LOADING_SPIN YES
 
 // if should auto rotate screen
-#define SHOULDAUTOROTATE NO 
+#define ENABLE_AUTO_ROTATE NO
 
 // if enable audio/vedio play background mode
 #define ENABLE_AUDIO_IN_BACKGROUND YES

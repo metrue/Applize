@@ -132,19 +132,15 @@
 }
 
 - (BOOL)prefersStatusBarHidden {
-	if (DISABLE_STATUS_BAR) {
-		return YES;
-	} else {
-		return NO;
-	}
+	return ENABLE_STATUS_BAR;
 }
 
 - (BOOL) shouldAutorotate {
-	return SHOULDAUTOROTATE;
+	return ENABLE_AUTO_ROTATE;
 }
 
 - (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-	return SHOULDAUTOROTATE;
+	return ENABLE_AUTO_ROTATE;
 }
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
@@ -158,7 +154,7 @@
 }
 
 - (void) webViewDidStartLoad:(UIWebView *)webView {
-	if (SHOW_LOADING_SPIN) {
+	if (ENABLE_LOADING_SPIN) {
 		[self startProgressIndicator];
 	}
 }
@@ -178,7 +174,7 @@
 }
 
 - (void) webViewDidFinishLoad:(UIWebView *)webView {
-	if (SHOW_LOADING_SPIN) {
+	if (ENABLE_LOADING_SPIN) {
 		[self stopProgressIndicator];
 	}
 }
