@@ -6,7 +6,15 @@ var Notification = function(title, options) {
   if (typeof title === 'undefined') {
     title = ''; 
   }   
-  window.location.href = "APPLIZE://ACTION/NOTIFICATION/DATA/" + title;
+
+  var body = '';
+  if (typeof options === 'object') {
+    if (object.body) {
+      body = object.body;
+    }
+  }
+
+  window.location.href = 'APPLIZE://ACTION/NOTIFICATION/DATA/' + 'title=' + title + '&' + 'body=' + body;
 };
 
 Notification.requestPermission = function(callback) {
@@ -19,11 +27,12 @@ Notification.permission = 'granted';
 // and it's unconfigurable, so I have no 
 // idea to set it to 1, but Web Notification
 // 's lenght should be 1 at begining
-Object.defineProperty(Notification, "length", {
-    value: 0,
-    configurable: true,
-    writable: true,
-    enumerable: true
-});
+//
+//Object.defineProperty(Notification, "length", {
+//    value: 0,
+//    configurable: true,
+//    writable: true,
+//    enumerable: true
+//});
 
-Notification.length = 1;
+//Notification.length = 1;

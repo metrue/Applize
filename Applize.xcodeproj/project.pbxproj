@@ -89,11 +89,11 @@
 		BA385E3C1C2ED228002C1674 = {
 			isa = PBXGroup;
 			children = (
-				BAD3042E1C36C62300BC88A6 /* AVFoundation.framework */,
 				BA385E471C2ED228002C1674 /* Applize */,
 				BA385E611C2ED228002C1674 /* ApplizeTests */,
 				BA385E6C1C2ED229002C1674 /* ApplizeUITests */,
 				BA385E461C2ED228002C1674 /* Products */,
+				BAD3042E1C36C62300BC88A6 /* AVFoundation.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,15 +112,15 @@
 			children = (
 				BAD3042A1C3518A100BC88A6 /* JavaScript */,
 				BA385E481C2ED228002C1674 /* Supporting Files */,
+				BA21B64C1C2EF69C00DC12DA /* Config.h */,
 				BA385E4B1C2ED228002C1674 /* AppDelegate.h */,
 				BA385E4C1C2ED228002C1674 /* AppDelegate.m */,
-				BA385E541C2ED228002C1674 /* Assets.xcassets */,
-				BA21B64C1C2EF69C00DC12DA /* Config.h */,
-				BA385E591C2ED228002C1674 /* Info.plist */,
-				BA385E561C2ED228002C1674 /* LaunchScreen.storyboard */,
-				BA21B64F1C2FC8F600DC12DA /* Main.storyboard */,
 				BA385E4E1C2ED228002C1674 /* ViewController.h */,
 				BA385E4F1C2ED228002C1674 /* ViewController.m */,
+				BA21B64F1C2FC8F600DC12DA /* Main.storyboard */,
+				BA385E561C2ED228002C1674 /* LaunchScreen.storyboard */,
+				BA385E591C2ED228002C1674 /* Info.plist */,
+				BA385E541C2ED228002C1674 /* Assets.xcassets */,
 			);
 			path = Applize;
 			sourceTree = "<group>";
@@ -154,8 +154,8 @@
 		BAD3042A1C3518A100BC88A6 /* JavaScript */ = {
 			isa = PBXGroup;
 			children = (
-				BAD3042C1C352C2C00BC88A6 /* notification.js */,
 				BAD304301C39245E00BC88A6 /* console.js */,
+				BAD3042C1C352C2C00BC88A6 /* notification.js */,
 			);
 			path = JavaScript;
 			sourceTree = "<group>";

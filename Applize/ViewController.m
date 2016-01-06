@@ -10,6 +10,7 @@
 #import "Config.h"
 #import <AVFoundation/AVFoundation.h>
 @import JavaScriptCore;
+@import Foundation;
 
 @interface ViewController () <UIWebViewDelegate>
 
@@ -109,9 +110,27 @@
 		NSLog(@"DEBUG: %@", actionInfo[@"data"]);
 
 		return NO;
+    } else if ([actionInfo[@"action"] containsString:@"NOTIFICATION"]) {
+        //TODO
+        // Should handle the title and body sepertate
+        [self showNotificationWithTitle:actionInfo[@"data"] body:@""];
+        return NO;
 	} else {
 		return YES;
 	}
+}
+
+- (void)showNotificationWithTitle:(NSString *)title body:(NSString *)body {
+	UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title
+	                                      message:body
+	                                      preferredStyle:UIAlertControllerStyleAlert];
+	UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"OK"
+	                           style:UIAlertActionStyleDefault
+	                           handler:^(UIAlertAction *action) {
+	                             [alertController dismissViewControllerAnimated:YES completion:nil];
+														 }];
+	[alertController addAction:actionOk];
+	[self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (NSDictionary *)getActionFrom:(NSURLRequest *)request {
