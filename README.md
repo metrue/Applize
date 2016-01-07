@@ -43,7 +43,12 @@ build it up, and you will see the magic.
 ## Advance
 
 * How to Change the name of your APP
+
   [http://stackoverflow.com/questions/238980/how-to-change-the-name-of-an-ios-app](http://stackoverflow.com/questions/238980/how-to-change-the-name-of-an-ios-app)
+
+* How to Change the icon of your APP
+
+  [https://developer.apple.com/library/ios/recipes/xcode_help-image_catalog-1.0/chapters/AddingLaunchImagestoanAssetCatalog.html](https://developer.apple.com/library/ios/recipes/xcode_help-image_catalog-1.0/chapters/AddingLaunchImagestoanAssetCatalog.html)
 
 ## LICENSE
 
