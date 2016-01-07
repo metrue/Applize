@@ -40,6 +40,11 @@ and you know the shortcut keys for build and run yeah
 ```
 build it up, and you will see the magic. 
 
+## Advance
+
+* How to Change the name of your APP
+  [http://stackoverflow.com/questions/238980/how-to-change-the-name-of-an-ios-app](http://stackoverflow.com/questions/238980/how-to-change-the-name-of-an-ios-app)
+
 ## LICENSE
 
 MIT
