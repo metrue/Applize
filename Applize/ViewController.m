@@ -131,6 +131,12 @@
 														 }];
 	[alertController addAction:actionOk];
 	[self presentViewController:alertController animated:YES completion:nil];
+   
+    // auto dissmise Alert view after 3s
+    dispatch_time_t delay = dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * 3.0);
+    dispatch_after(delay, dispatch_get_main_queue(), ^(void){
+        [alertController dismissViewControllerAnimated:YES completion:nil];
+    });
 }
 
 - (NSDictionary *)getActionFrom:(NSURLRequest *)request {
