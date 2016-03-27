@@ -111,7 +111,7 @@
     } else if ([actionInfo[@"action"] containsString:@"NOTIFICATION"]) {
         //TODO
         // Should handle the title and body sepertate
-        [self showNotificationWithTitle:actionInfo[@"data"] body:@""];
+        [self showNotificationWithTitle:actionInfo[@"title"] body:actionInfo[@"body"]];
         return NO;
     } else if ([actionInfo[@"action"] containsString:@"ALERT"]) {
         
@@ -143,14 +143,26 @@
 
 - (NSDictionary *)getActionFrom:(NSURLRequest *)request {
 	NSString *urlString = request.URL.absoluteString;
-	NSArray *tmp = [urlString componentsSeparatedByString:@"//ACTION/"];
-	if ([tmp count] == 2) {
-		NSArray *info = [tmp[1] componentsSeparatedByString:@"/DATA/"];
-		return @{
-						 @"action": info[0],
-						 @"data": info[1]
-		};
-	} else {
+    if ([urlString containsString:@"applize://ACTION/NOTIFICATION"]) {
+        NSString *action = @"NOTIFICATION";
+        NSArray *tmp = [urlString componentsSeparatedByString:@"/DATA/"];
+        NSArray *message = [tmp[1] componentsSeparatedByString:@"&"];
+        NSString *title = [message[0] componentsSeparatedByString:@"="][1];
+        NSString *body = [message[1] componentsSeparatedByString:@"="][1];
+        return @{
+                 @"action": action,
+                 @"title": title,
+                 @"body": body
+                 };
+    } else if ([urlString containsString:@"applize://ACTION/CONSOLE"]) {
+        NSArray *tmp = [urlString componentsSeparatedByString:@"//ACTION/"];
+        NSArray *info = [tmp[1] componentsSeparatedByString:@"/DATA/"];
+        return @{
+                 @"action": info[0],
+                 @"data": info[1]
+                 };
+    
+    } else {
 		return @{
 						 @"action":@"NO",
 						 @"data": @"NO"

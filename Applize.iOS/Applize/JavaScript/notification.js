@@ -19,7 +19,6 @@
     };
 
     Notification.permission = 'granted';
-    console.log(Notification)
  })(this);
 
 // length is readonly propery of function,
