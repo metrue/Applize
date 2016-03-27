@@ -1,6 +1,5 @@
 (function() {
-  setInterval(function() {
-    console.log('Hello, I will keep saying this');
-    alert('aaa');
-  }, 1000)
+  setTimeout(function() {
+    console.log('If you see this in XCode Console, Applize works normally then');
+  }, 2000)
 })(this);

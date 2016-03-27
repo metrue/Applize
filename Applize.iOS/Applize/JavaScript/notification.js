@@ -1,30 +1,29 @@
-'use strict';
+(function() {
+    var Notification = function(title, options) {
+      if (typeof title === 'undefined') {
+        title = '';
+      }
 
-//
+      var body = '';
+      if (typeof options === 'object') {
+        if (object.body) {
+          body = object.body;
+        }
+      }
 
-var Notification = function(title, options) {
-  if (typeof title === 'undefined') {
-    title = ''; 
-  }   
+      window.location.href = 'APPLIZE://ACTION/NOTIFICATION/DATA/' + 'title=' + title + '&' + 'body=' + body;
+    };
 
-  var body = '';
-  if (typeof options === 'object') {
-    if (object.body) {
-      body = object.body;
-    }
-  }
+    Notification.requestPermission = function(callback) {
+      callback('granted');
+    };
 
-  window.location.href = 'APPLIZE://ACTION/NOTIFICATION/DATA/' + 'title=' + title + '&' + 'body=' + body;
-};
+    Notification.permission = 'granted';
+    console.log(Notification)
+ })(this);
 
-Notification.requestPermission = function(callback) {
-  callback('granted');
-};
-
-Notification.permission = 'granted';
-
-// length is readonly propery of function, 
-// and it's unconfigurable, so I have no 
+// length is readonly propery of function,
+// and it's unconfigurable, so I have no
 // idea to set it to 1, but Web Notification
 // 's lenght should be 1 at begining
 //

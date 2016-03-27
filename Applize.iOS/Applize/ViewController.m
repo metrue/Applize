@@ -28,8 +28,6 @@
 		[self enableAudioInBackground];
 	}
 
-	[self injectNotificationWebhook];
-	[self injectConsoleWebhook];
 	[self loadWebSite];
 }
 
@@ -115,6 +113,10 @@
         // Should handle the title and body sepertate
         [self showNotificationWithTitle:actionInfo[@"data"] body:@""];
         return NO;
+    } else if ([actionInfo[@"action"] containsString:@"ALERT"]) {
+        
+        [self showNotificationWithTitle:actionInfo[@"data"] body:@""];
+        return NO;
 	} else {
 		return YES;
 	}
@@ -156,6 +158,7 @@
 	}
 }
 
+
 - (BOOL)prefersStatusBarHidden {
 	return ENABLE_STATUS_BAR;
 }
@@ -182,6 +185,8 @@
 	if (ENABLE_LOADING_SPIN) {
 		[self startProgressIndicator];
 	}
+    [self injectConsoleWebhook];
+    [self injectNotificationWebhook];
 }
 
 - (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
