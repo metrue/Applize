@@ -12,6 +12,9 @@
 // Change url to your website
 #define URL_OF_YOUR_WEBSITE @"http://localhost:3000"
 
+// Set User-Agent
+#define USER_AGENT @""
+
 // Config name of your app
 #define NAME_OF_YOUR_NAME @""
 

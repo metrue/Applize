@@ -19,18 +19,6 @@
     };
 
     Notification.permission = 'granted';
+ 
+    this.Notification = Notification;
  })(this);
-
-// length is readonly propery of function,
-// and it's unconfigurable, so I have no
-// idea to set it to 1, but Web Notification
-// 's lenght should be 1 at begining
-//
-//Object.defineProperty(Notification, "length", {
-//    value: 0,
-//    configurable: true,
-//    writable: true,
-//    enumerable: true
-//});
-
-//Notification.length = 1;

@@ -27,8 +27,17 @@
 	if (ENABLE_AUDIO_IN_BACKGROUND) {
 		[self enableAudioInBackground];
 	}
+    
+    if ([USER_AGENT length] > 0) {
+        [self setUserAgent];
+    }
 
 	[self loadWebSite];
+}
+
+- (void) setUserAgent {
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:USER_AGENT, @"UserAgent", nil];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];
 }
 
 - (void) loadWebSite {
